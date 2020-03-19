@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(dollar.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  font-family: "Sen", sans-serif;
+}
+
+.container {
+  background: #313840;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10vh auto;
+  height: 80vh;
+  width: 50%;
+  text-align: center;
+}
+
+.form h1 {
+  margin: 2.5vh;
+  color: #70a1ff;
+  cursor: pointer;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-gap: 5%;
+}
+
+.input img {
+  transition: 0.5s;
+}
+
+.input img:hover {
+  transform: scale(1.25);
+}
+
+input[type="number"] {
+  transition: 0.5s;
+  font-family: "Sen", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: #70a1ff;
+}
+
+input[type="number"]:focus {
+  box-shadow: 0 0 5px 5px #70a1ff;
+}
+
+#currency::placeholder {
+  color: #70a1ff;
+  font-weight: bold;
+}
+
+#btn {
+  background: #70a1ff;
+  color: white;
+  border: none;
+  border-radius: 10%;
+  padding: 10px;
+  font-family: "Sen", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#btn:hover {
+  opacity: 0.66;
+}
+
+.output {
+  width: 80%;
+  margin-top: 2.5vh;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #70a1ff;
+  border-radius: 2%;
+  background: none;
+  padding: 10px;
+}
+
+.output:hover {
+  background: #70a1ff;
+  color: white;
+}
+
+.usa,
+.cad,
+.aud,
+.chf,
+.gbp,
+.jpy,
+.rub,
+.rsd,
+.brl,
+.ars {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
+
+  .input {
+    display: grid;
+    grid-template-areas:
+      "flag input input"
+      "button button button";
+    grid-gap: 6px;
+  }
+
+  .input img {
+    grid-area: flag;
+  }
+
+  .input input {
+    grid-area: input;
+  }
+
+  .input button {
+    grid-area: button;
+  }
+
+  .container {
+    background: #313840;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5vh auto;
+    height: 90vh;
+}
