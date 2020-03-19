@@ -111,6 +111,20 @@ input[type="number"]:focus {
   width: 100%;
 }
 
+.usa:hover,
+.cad:hover,
+.aud:hover,
+.chf:hover,
+.gbp:hover,
+.jpy:hover,
+.rub:hover,
+.rsd:hover,
+.brl:hover,
+.ars:hover {
+  background: #313840;
+  opacity: 0.8;
+}
+
 @media (max-width: 800px) {
   .container {
     width: 80%;
