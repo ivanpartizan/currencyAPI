@@ -84,7 +84,7 @@ input[type="number"]:focus {
   margin-right: 5%;
   border: 1px solid #70a1ff;
   border-radius: 2%;
-  background: none;
+  background: #70a1ff;
   padding: 10px;
 }
 
