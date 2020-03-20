@@ -4,6 +4,8 @@ const input = document.getElementById("currency");
 button.addEventListener("click", currencyConverter);
 input.addEventListener("keyup", enterKey);
 
+document.getElementById("output").style.display = "none";
+
 function enterKey(e) {
   if (e.keyCode === 13) {
     currencyConverter();
@@ -17,8 +19,9 @@ async function currencyConverter() {
   const data = await response.json();
   console.log(data);
 
-  if (input.value >= 0) {
-    document.getElementById("output").innerHTML = `
+  document.getElementById("output").style.display = "block";
+
+  document.getElementById("output").innerHTML = `
     <div class='usa'>
     <h2>USD</h2> <img src='usd.svg' height='40'> <h2>${(
       (input.value * data.rates.USD) /
@@ -80,7 +83,4 @@ async function currencyConverter() {
     ).toFixed(2)}</h2>
     </div>
   `;
-  }
 }
-
-currencyConverter();
