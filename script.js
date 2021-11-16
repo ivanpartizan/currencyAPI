@@ -15,6 +15,10 @@ function enterKey(e) {
 async function currencyConverter() {
   const url = `https://api.frankfurter.app/latest?amount=${input.value}&from=EUR&to=USD,CAD,AUD,CHF,GBP,JPY,RUB,RSD,BRL,ARS`;
 
+  if (input.value < 1) {
+    alert("Please, enter valid value");
+  }
+
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
